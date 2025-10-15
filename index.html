@@ -20,6 +20,12 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
   </header>
 
   <!-- Home Section -->
@@ -28,10 +34,12 @@
       <h1>Hello, I'm <span class="name">Kalaiselvi.S</span></h1>
 
       <!-- Slideshow of Roles -->
+      
       <h2 class="slideshow">
-        <span class="text">CS Student</span>
-        <span class="text">Front End Developer</span>
-      </h2>
+  <span class="text">CS Student</span>
+  <span class="text">Full Stack Developer</span>
+</h2>
+
 
       <p>
         "Final-year Computer Science student skilled in Java, Python, front-end development, SQL, and OOPS     
@@ -148,7 +156,7 @@
 
     <!-- Project 2 -->
     <div class="project-card">
-      <a href="" target="_blank">
+      <a href="https://github.com/KalaiselviS27/hospital_management_sys" target="_blank">
         <div class="project-image">
           <img src="image\hosp.jpg" alt="Hospital Management System">
           <div class="overlay">
@@ -187,7 +195,7 @@
 
     <!-- Project 5 -->
     <div class="project-card">
-      <a href="" target="_blank">
+      <a href="https://github.com/KalaiselviS27/depignite" target="_blank">
         <div class="project-image">
           <img src="image\dp.png" alt="DeptIgnite">
           <div class="overlay">
@@ -199,7 +207,7 @@
     </div>
 
     <div class="project-card">
-      <a href="" target="_blank">
+      <a href="https://github.com/KalaiselviS27/balloon_burst_game" target="_blank">
         <div class="project-image">
           <img src="image\balloon.jpg" alt="Balloon game">
           <div class="overlay">
@@ -604,9 +612,29 @@
 
       <!-- Map -->
       <div class="map-holder">
-        <iframe src=""></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4152292.880715797!2d81.74775985303533!3d12.856797745249668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baa1f26ca710f17%3A0xa28f703fad4c5db3!2sEsanatham%2C%20Tamil%20Nadu%20639203!5e0!3m2!1sen!2sin!4v1734010797256!5m2!1sen!2sin" allowfullscreen="" loading="lazy"referrerpolicy="no-referrer-when-downgrade" width="500px"></iframe>
     </div>
   </div>
 </section>
+
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('nav ul');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+
+  // Optional: close menu when clicking a nav link
+  document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+</script>
+
 </body>
 </html>
